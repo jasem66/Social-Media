@@ -12,13 +12,15 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   media: {
-   width:'100%',
-    height: '500px',
-    objectFit: 'cover',
+    height: '510px',
+     [theme.breakpoints.down('sm')]: {
+    height: '350px',
+  },
   },
   card: {
     marginTop: theme.spacing(5),
   },
+ 
 }))
 function Post() {
   const classes = useStyles()
